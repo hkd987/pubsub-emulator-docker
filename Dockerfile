@@ -5,7 +5,7 @@ MAINTAINER Singularities
 # Install Java 8 for Pub/Sub emulator
 RUN apk --update add openjdk8-jre
 RUN gcloud components install pubsub-emulator --quiet
-RUN gcloud beta emulators pubsub env-init
+RUN gcloud components update
 
 # Volume to persist Pub/Sub data
 VOLUME /opt/data
